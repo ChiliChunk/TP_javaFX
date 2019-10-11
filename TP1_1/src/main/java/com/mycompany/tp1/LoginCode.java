@@ -9,6 +9,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
@@ -51,9 +52,13 @@ public class LoginCode extends BorderPane{
         Button cancelButton = new Button("cancel");
         cancelButton.setCancelButton(true);
         cancelButton.setOnAction(e -> {controller.processCancel(e);});
-        bottomPane.getChildren().addAll(okButton , cancelButton);
+        ProgressBar pb = new ProgressBar();
+        password.textProperty().addListener((obs , oldValue , newValue)->{
+            pb.setProgress(password.getText().length()/8.0f);
+        });
+        bottomPane.getChildren().addAll(okButton , cancelButton , pb);
+
         this.setBottom(bottomPane);
-        
         this.setPrefSize(437, 187);
         this.setPadding(new Insets(10,0,10,0));
     }
