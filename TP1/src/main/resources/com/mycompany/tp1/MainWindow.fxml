@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tp1.MainWindowController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0">
-         <image>
-            <Image url="@windows.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="241.0" layoutY="41.0" text="SECONDE FENETRE" />
-      <Label layoutX="259.0" layoutY="349.0" text="Connected :)" textFill="WHITE" />
-      <ImageView fitHeight="207.0" fitWidth="187.0" layoutX="207.0" layoutY="100.0">
-         <image>
-            <Image url="@connection.png" />
-         </image>
-      </ImageView>
+      <ComboBox fx:id="comboFace" layoutX="158.0" layoutY="73.0" prefWidth="150.0" promptText="Visage" />
+      <Canvas fx:id="myCanva" height="400.0" layoutX="308.0" layoutY="-2.0" width="291.0" />
+      <Label layoutX="124.0" layoutY="38.0" text="Création de Personnage" />
+      <Label layoutX="37.0" layoutY="78.0" text="Forme Visage" />
+      <Label layoutX="37.0" layoutY="153.0" text="Longueure Cheveux" />
+      <Slider fx:id="sliderHair" blockIncrement="1.0" layoutX="195.0" layoutY="153.0" max="150.0" prefHeight="16.0" prefWidth="113.0" value="75.0" />
+      <Label layoutX="37.0" layoutY="200.0" text="Couleur de la peau" />
+      <ListView fx:id="listSkinColor" layoutX="169.0" layoutY="200.0" prefHeight="165.0" prefWidth="139.0" />
    </children>
 </AnchorPane>

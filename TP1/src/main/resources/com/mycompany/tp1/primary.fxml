@@ -6,8 +6,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -19,14 +17,9 @@
    <center>
       <AnchorPane prefHeight="194.0" prefWidth="343.0">
          <children>
-            <ImageView fx:id="hackerman" fitHeight="194.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@hackerman.jpg" />
-               </image>
-            </ImageView>
             <VBox alignment="CENTER" prefHeight="194.0" prefWidth="346.0" spacing="20.0">
                <children>
-                  <Label text="Identification" textFill="WHITE" />
+                  <Label text="Identification" />
                   <GridPane>
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="111.0" />
@@ -37,10 +30,10 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="Login:" textFill="WHITE" />
-                        <Label text="Password:" textFill="WHITE" GridPane.rowIndex="1" />
-                        <PasswordField fx:id="password" text="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField fx:id="login" prefHeight="26.0" prefWidth="230.0" text="Login" GridPane.columnIndex="1" />
+                        <Label text="Login:" />
+                        <Label text="Password:" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="password" text="password1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="login" prefHeight="26.0" prefWidth="230.0" text="login1" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
                   <ButtonBar prefHeight="39.0" prefWidth="147.0">

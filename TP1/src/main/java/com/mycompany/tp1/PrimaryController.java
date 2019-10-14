@@ -33,7 +33,7 @@ public class PrimaryController{
                 
                 MainWindowController controller = loader.getController();
                 controller.setContext(context);
-                
+                controller.init();
                 Scene scene = new Scene(rootLayout, 600, 400);
                 stage.setScene(scene);
                 stage.centerOnScreen();

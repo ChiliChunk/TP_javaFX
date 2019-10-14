@@ -10,6 +10,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.scene.paint.Color;
 
 /**
  *
@@ -19,6 +20,36 @@ class Personne {
         
     StringProperty login = new SimpleStringProperty();
     StringProperty password = new SimpleStringProperty();
+    
+    //Char creation
+    int hairSize = 75;
+    Color skinColor = Color.PINK;
+    int faceShape = 0;
+    
+    public int getHairSize(){
+        return this.hairSize;
+    }
+    
+    public Color getSkinColor(){
+        return this.skinColor;
+    }
+    
+    public int getFaceShape(){
+        return this.faceShape;
+    }
+    
+    public void setFaceShape(int newVal){
+        this.faceShape = newVal;
+    }
+    
+    public void setHairSize(int newVal){
+        this.hairSize = newVal;
+    }
+    
+    public void setSkinColor(Color newVal){
+        this.skinColor = newVal;
+    }
+    
     private final ObjectProperty<LocalDateTime> lastConnection = new SimpleObjectProperty();
     
     public Personne (String login , String password){
